@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Cour;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -16,9 +17,11 @@ class CourFactory extends Factory
      */
     public function definition(): array
     {
+
         return [
-            'nom' => fake('FR_fr')->title(),
-            'professeur_id'=> rand(0,29)
+            
+            'nom' => fake('FR_fr')->jobTitle(),
+            'professeur_id'=> rand(1,30),
         ];
     }
 }
