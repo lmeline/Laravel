@@ -17,8 +17,8 @@ class CourFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => fake('FR_fr')->Firstname(),
-            'professeur'=>fake('FR_fr')->LastName(),
+            'nom' => fake('FR_fr')->title(),
+            'professeur_id'=> rand(0,29)
         ];
     }
 }
