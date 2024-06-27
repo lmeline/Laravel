@@ -23,9 +23,11 @@ class UserFactory extends Factory
      */
     public function definition(): array
     {
+        $type=rand(1,4);
         return [
             'name' => fake('FR_fr')->Firstname(),
             'prenom'=>fake('FR_fr')->LastName(),
+            'type'=>($type==1?'Professeur':'Eleve'),
             'email' => fake('FR_fr')->unique()->safeEmail(),
             'date_naissance'=>fake()->date(),
             'email_verified_at' => now(),
