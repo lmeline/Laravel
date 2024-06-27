@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Cour;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -12,6 +13,6 @@ class CourSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        Cour::factory(30)->create();
     }
 }
