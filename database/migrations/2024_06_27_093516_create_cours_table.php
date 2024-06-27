@@ -16,7 +16,6 @@ return new class extends Migration
             $table->string('nom',70);
             $table->string('professeur',70);
             $table->timestamps();
-            $table->string('');
         });
     }
 
